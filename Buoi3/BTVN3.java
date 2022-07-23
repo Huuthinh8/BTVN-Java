@@ -58,6 +58,18 @@ public class BTVN3 {
                 System.out.print(a[i]+" ");
         }
     }
+    public static void sapxep(int a[],int n){
+        for(int i=0;i<n;i++)
+            for(int j=i+1;j<n;j++)
+            {
+                if(a[i]>a[j])
+                {
+                    int tg=a[i];
+                        a[i]=a[j];
+                        a[j]=tg;
+                }
+            }
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int a[],n;
@@ -81,5 +93,11 @@ public class BTVN3 {
         songuyento(a,n);
         System.out.println("\nSo chinh phuong trong mang la:");
         scp(a,n);
+        sapxep(a,n);
+        System.out.println("\nMang da sap xep la:");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(a[i]+" ");
+        }
     }
 }
